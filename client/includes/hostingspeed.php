@@ -1,6 +1,7 @@
 <?php
 
 require_once('config.php');
+require_once('version.php');
 require_once('tests.php');
 
 /**
@@ -63,6 +64,9 @@ class Hostingspeed {
    * @return void
    */
   public function report() {
+    global $hostingspeed_version;
+    
+    echo "Hostingspeed version: {$hostingspeed_version}";
     print_r( $this->results );
   }
   
